@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import NavBar from './NavBar'
 import { useAuth } from '../contexts/AuthContext'
 import { Link } from 'react-router-dom'
@@ -8,6 +9,7 @@ const Register: React.FC = () => {
     const [inputUsername, setInputUsername] = useState<string>('');
     const [inputPassword, setInputPassword] = useState<string>('');
     const {username, login} = useAuth();
+    const navigate = useNavigate();
     const registerAPI = async () => {
         const registerAPIURL = 'https://192.168.1.210:8000/api/register';
         const response = await fetch(registerAPIURL, {
@@ -30,7 +32,7 @@ const Register: React.FC = () => {
     }
     useEffect(() => {
         if (username) {
-            <Link to='/' replace />
+            navigate('/', { replace: true });
         }
     }, [username])
     return (
