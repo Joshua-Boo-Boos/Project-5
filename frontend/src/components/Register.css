@@ -1,0 +1,24 @@
+.register-container {
+    width: 70%;
+    height: 70%;
+    border: 2px solid rgb(200,200,200);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.register-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(200,200,200);
+    border-radius: 10px;
+    padding: 4%;
+}
+
+.register-controls > * {
+    margin: 3%;
+}

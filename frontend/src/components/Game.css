@@ -1,0 +1,79 @@
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70%;
+    border: 2px solid rgb(222, 222, 222);
+    border-radius: 10px;
+    padding: 2% 6%;
+}
+
+.game-container > * {
+    padding: 2%;
+    margin: 2%;
+}
+
+.welcome-title {
+    font-size: 30px;
+    text-decoration: underline;
+    width: 100%;
+}
+
+.functionality-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.sudoku-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid rgb(200,200,200);
+    border-radius: 10px;
+    height: 100%;
+    width: fit-content;
+    padding: 0 10%;
+}
+
+.grid-container {
+    border: 2px solid blue;
+}
+
+.grid-container > *:nth-child(3n):not(:last-child) {
+    border-bottom: 2px solid blue;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.row-container > *:nth-child(3n):not(:last-child) {
+    border-right: 2px solid blue;
+}
+
+.input-cell {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.sudoku-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.sudoku-controls > button {
+    margin: 1%;
+    font-size: 14px;
+}
